@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <section>
+        <div class="container1">
+        <div class="hero-title">
+        <h1>Body Mass Index Calculator</h1>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+        </div>
+        
+
+        <div class="calculator">
+            <h1>BMI Calculator</h1>
+
+            <div class="content">
+            <div class="gender-buttons">
+                <button id="maleBtn" class="gender-btn" onclick="selectGender('male')">Male</button>
+                <button id="femaleBtn" class="gender-btn" onclick="selectGender('female')">Female</button>
+            </div>
+
+            <div class="age-container">
+    
+            <label class="age" for="age">Age (years):</label>
+            <input type="number" id="age" placeholder="Years">
+            </div>
+
+            <div class="containerHW">
+               <div class="inputW">
+            <label for="weight">Weight (lb):</label>
+            <input type="number" id="weight" placeholder="">
+            </div>
+
+            <div class="inputH">
+    
+            <label for="feet">Height:</label>
+            <div>
+                <input type="number" id="feet" placeholder="Ft" style="width: 45%; display: inline-block; margin-right: 5px;">
+                <input type="number" id="inches" placeholder="In" style="width: 45%; display: inline-block;">
+            </div>
+            </div>
+            </div>
+    
+            <button onclick="calculateBMI()">Calculate BMI</button>
+    
+            <div class="result" id="result"></div>
+
+            </div>
+        </div>
+
+          </div>
+
+
+
+    </section>
+
+    <section>
+        <div class="container2">
+            <img src="/images/icons8-team-NtwdMDylfTw-unsplash.jpg">
+           
+           <div class="c2-content">
+            <h2>What your BMI results mean</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+        </div>
+
+        <div class="container3"> 
+             <div class="c3-item">
+                <div class="icons">
+                <img src="/images/free_icon_1.svg" height="50px">
+                </div>
+             <h3>Healthy Eating</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+
+               <div class="c3-item">
+                <div class="icons">
+                <img src="/images/free_icon_1 (1).svg" height="60px">
+                </div>
+                <h3>Regular exercise</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+               </div>
+
+               <div class="c3-item">
+                <div class="icons">
+                <img src="/images/free_icon_1 (2).svg" height="50px">
+                </div>
+                <h3>Adequate Sleep</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+               </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container4">
+            
+        
+        <div class="c4-content2">
+
+            <div class="c4-content1">
+                <h2>Limitations of BMI</h2>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                  
+                 </div>
+         <div class="c4-item c4-gender">
+            <h3>Gender</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
+         </div>
+          
+        
+         <div class="c4-item race">
+            <h3>Race</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+         </div>
+
+         <div class="c4-item age">
+            <h3>Age</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+         </div>
+
+         
+
+        
+
+         <div class="c4-item muscle">
+            <h3>Muscle</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+         </div>
+
+         <div class="c4-item pregnancy">
+            <h3>Pregnancy</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+         </div>
+
+        
+
+         </div>
+          </div>
+       
+    </section>
+	<script src="index.js"></script>
+  </body>
+</html>
+
