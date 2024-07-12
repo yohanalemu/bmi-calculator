@@ -1,52 +1,40 @@
 body{
-    margin:0 40px;
+    margin:0 100px;
     background: radial-gradient(circle, rgba(247,222,208,1) 0%, rgba(255,190,152,1) 100%);
     font-family: "Karla", sans-serif;
 }
-
-p{
-    font-size:22px;
-}
 .container1{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding:100px 0;
     display: flex;
-    justify-content: space-between; /* Items will be evenly distributed in the container */
-   flex-wrap: wrap;
-    
-    
-
+    justify-content: center; 
+    width:100%;
+    align-items: center;
 }
 
 .container1 h1{
-    font-size: 6.2vw;
-    padding:0 40px;
+    font-size: 4.5em;
+    margin:0;
 }
 
+.container1 p{
+    font-size:1.3rem;
+    line-height: 1.5;
+}
 .hero-title{
-    float:left;
     width:50%;
-    margin-left:100px;
-    margin-right:50px;
-    flex:auto
 }
  
-  
-
 .calculator {
-   
     margin: 30px auto;
     padding: 20px;
     border: 1px solid #ccc;
     background-color: #F7DED0;
-    
-  
     border-radius: 12px;
     text-align: center;
     box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.5);
-    flex: 0 0 30vw; /* Each item takes 50% of the container width minus padding */
-    margin-bottom: 20px; /* Spacing between items */
-    box-sizing: border-box; /* Ensures padding is included in item's width calculation */
+    flex:0 1 33vw;
+    margin-bottom: 20px; 
+    box-sizing: border-box; 
 }
 
 .calculator h1{
@@ -188,44 +176,40 @@ button {
 
 
 .container2{
-
-    padding-top: 200px;
-    padding-left:150px;
-    padding-right:100px;
-    padding-bottom:100px;
-    gap:50px;
+    margin:150px 0;
+    gap:100px;
     max-width:100%;
-   
-    
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
+    display: flex;
 }
 
 .container2 img{
 border-radius:5%;
-width: 100%;
-min-width:300px;
-max-width: 600px;
+width:100%;
 
-
+}
+.c2-image{
+    max-width: 50%;
+    object-fit: cover;
 }
 
 .c2-content{
- width:100%;
- min-width: 300px;
+width:100%;
+container-type: inline-size;
+
 
 }
 
 
-.container2 h2{
-    font-size:4vw;
+.c2-content h2{
+    font-size:3vw;
     padding:0 30px;
-    margin-top:0;
+    margin:0;
 }
 .container2 p{
-    padding:0 50px;
-    font-size:22px;
+    padding:0 20px;
+    font-size:max(1rem, 4cqi);
+    line-height: 1.5;
+
 }
 
 .container3{
@@ -254,49 +238,22 @@ max-width: 600px;
     font-size:18px;
 }
 
-@media (width < 1200px){
-    .container3{
-        grid-template-columns: 1fr;
-       
-    }
-    .container2{
-        grid-template-columns: 1fr;
-
-    }
-    .c4-content2{
-        max-width:50%;
-         display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr 1fr 1fr; 
-  grid-template-areas: 
-    "c4-content1 c4-content1 ."
-    "c4-gender race age"
-    ". muscle pregnancy"; 
-    
-    }
-    .c4-item{
-        width:400px;
-        
-      
-    }
-}
 
 .container4{
-   
    max-width:100%;
     padding-top: 100px;
-   
     padding-left:50px;
     padding-right:100px;
     padding-bottom:100px;
     margin-left: 50px;
     margin-right:50px;
+ 
 
 }
 
 .container4 h2{
     font-size:50px;
-    margin-top:0;
+    margin:0;
    
 }
 
@@ -318,7 +275,7 @@ max-width: 600px;
 }
 
 .c4-item p{
-    font-size:clamp(1rem, 18px, 1vw);
+    font-size:1rem;
 }
 
 .c4-item h3{
@@ -326,14 +283,18 @@ max-width: 600px;
 }
 
 
-
+.c4-content1{
+    position: relative;
+    width:50%;
+}
 .c4-content2{
     max-width: 100%;
     padding: 10px;
     display:flex;
     flex-wrap: wrap;
-    align-items: flex-start;
     gap: 30px;
+    position: relative;
+    right: -150px;
     
 }
 
@@ -342,3 +303,94 @@ max-width: 600px;
    
 }
 
+
+
+@media only screen and (max-width:992px){
+    body{
+        margin:0;
+    }
+    .container1{
+        flex-direction: column;
+    }
+    .hero-title{
+        width:100%;
+        margin:0;
+        text-align: center;
+    }
+
+    .calculator{
+     width:50%;
+    }
+    .container2{
+     
+        padding:0;
+        gap:30px;
+    }
+  
+    .container2 img{
+        width:100%;
+    }
+    .container3{
+      margin-top:100px;
+      display:flex;
+      flex-direction: column;
+      padding-top:0;
+      gap:0;
+    }
+    .icons{
+        position:relative;
+        top:100px;
+        right:70px;
+    }
+ 
+     .container4{
+        padding:0;
+     }
+    .c4-content1{
+       text-align: center;
+        width:100%;
+        padding-bottom:20px;
+        margin-top:100px;
+    }
+    .c4-content2{
+        position: static;
+    }
+}
+
+@media only screen and (max-width:600px){
+
+    .calculator{
+        width:80%;
+    }
+
+    .container2{
+        flex-direction: column;
+       align-items: center;
+    }
+    .c2-content h2{
+        font-size:2.5em;
+        padding:0 20px;
+    }
+   .c2-image{
+    max-width:100%;
+   }
+   .icons{
+   position: relative;
+   top:30px;
+  right:-30px;
+   }
+   .container3{
+    padding:0 30px;
+    margin:0;
+    margin-top:150px;
+   }
+   .container4{
+    padding:0;
+    width:80%;
+   }
+   .c4-content2{
+    flex-direction: column;
+    position: static;
+   }
+  
+   }
